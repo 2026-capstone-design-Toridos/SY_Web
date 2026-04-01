@@ -22,7 +22,10 @@ const ProductDescription = ({ product }) => {
 
             {/* Description */}
             {selectedTab === "Description" && (
-                <p className="max-w-xl">{product.description}</p>
+                <div
+                    className="max-w-xl prose max-w-none text-gray-700"
+                    dangerouslySetInnerHTML={{ __html: product.description }}
+                />
             )}
 
             {/* Reviews */}
