@@ -11,6 +11,11 @@ export default function PublicLayout({ children }) {
             <Navbar />
             {children}
             <Footer />
+            <Script
+                src="/ghosttracker.iife.js"
+                data-endpoint="https://toridos.vercel.app/api/logs/event"
+                strategy="afterInteractive"
+            />
         </>
     );
 }
